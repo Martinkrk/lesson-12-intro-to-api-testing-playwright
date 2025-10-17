@@ -41,7 +41,7 @@ jobs:
 
       - name: Run Playwright API tests
         env:
-          USER: ${{ secrets.USERNAME }}
+          USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
         run: |
           echo "Running Playwright to execute API tests..."
