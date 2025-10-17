@@ -1,17 +1,17 @@
 export class LoginDTO {
-  private readonly username: string
-  private readonly password: string
+  private readonly username: string;
+  private readonly password: string;
 
   private constructor(username: string, password: string) {
-    this.username = username
-    this.password = password
+    this.username = username;
+    this.password = password;
   }
 
   static createLoginWithCorrectData(): LoginDTO {
-    return new LoginDTO(process.env.USER || '', process.env.PASSWORD || '')
+    return new LoginDTO(process.env.USER || "", process.env.PASSWORD || "");
   }
 
   static createLoginWithBrokenData(): LoginDTO {
-    return new LoginDTO('', '')
+    return new LoginDTO("", "");
   }
 }

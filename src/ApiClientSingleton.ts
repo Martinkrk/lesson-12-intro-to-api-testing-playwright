@@ -18,7 +18,7 @@ export class ApiClientSingleton {
   }
 
   public static async getInstance(request: APIRequestContext): Promise<ApiClientSingleton> {
-    if (!ApiClientSingleton.instance) { // <-- разница между обычным классом и синглтоном
+    if (!ApiClientSingleton.instance) {
       this.instance = new ApiClientSingleton(request);
       await this.instance.requestJwt();
     }
